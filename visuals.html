@@ -13076,7 +13076,7 @@ div#notebook {
 
 <div class="cell border-box-sizing code_cell rendered">
 <div class="input">
-<div class="prompt input_prompt">In&nbsp;[1]:</div>
+<div class="prompt input_prompt">In&nbsp;[22]:</div>
 <div class="inner_cell">
     <div class="input_area">
 <div class=" highlight hl-ipython3"><pre><span></span><span class="kn">import</span> <span class="nn">plotly</span> 
@@ -13087,7 +13087,10 @@ div#notebook {
 <span class="kn">import</span> <span class="nn">plotly.graph_objects</span> <span class="k">as</span> <span class="nn">go</span>
 <span class="kn">import</span> <span class="nn">plotly.express</span> <span class="k">as</span> <span class="nn">px</span>
 <span class="kn">import</span> <span class="nn">plotly.io</span> <span class="k">as</span> <span class="nn">pio</span>
-<span class="n">pio</span><span class="o">.</span><span class="n">renderers</span><span class="o">.</span><span class="n">default</span> <span class="o">=</span> <span class="s2">&quot;iframe&quot;</span>
+<span class="c1">#pio.renderers.default = &quot;iframe_connected&quot;</span>
+<span class="kn">import</span> <span class="nn">IPython</span>
+<span class="kn">from</span> <span class="nn">IPython.display</span> <span class="k">import</span> <span class="n">IFrame</span>
+<span class="kn">from</span> <span class="nn">IPython.display</span> <span class="k">import</span> <span class="n">HTML</span>
 </pre></div>
 
     </div>
@@ -13104,7 +13107,7 @@ div#notebook {
 </div>
 <div class="cell border-box-sizing code_cell rendered">
 <div class="input">
-<div class="prompt input_prompt">In&nbsp;[42]:</div>
+<div class="prompt input_prompt">In&nbsp;[&nbsp;]:</div>
 <div class="inner_cell">
     <div class="input_area">
 <div class=" highlight hl-ipython3"><pre><span></span><span class="o">%</span><span class="k">run</span> ./data_collection/00-daily-download.py
@@ -13114,109 +13117,16 @@ div#notebook {
 </div>
 </div>
 
-<div class="output_wrapper">
-<div class="output">
-
-
-<div class="output_area">
-
-    <div class="prompt"></div>
-
-
-<div class="output_subarea output_stream output_stdout output_text">
-<pre>Downloading data for state AL
-Downloading data for state AK
-Downloading data for state AZ
-Downloading data for state AR
-Downloading data for state CA
-Downloading data for state CO
-Downloading data for state CT
-Downloading data for state DE
-Downloading data for state FL
-Downloading data for state GA
-Downloading data for state HI
-Downloading data for state ID
-Downloading data for state IL
-Downloading data for state IN
-Downloading data for state IA
-Downloading data for state KS
-Downloading data for state KY
-Downloading data for state LA
-Downloading data for state ME
-Downloading data for state MD
-Downloading data for state MA
-Downloading data for state MI
-Downloading data for state MN
-Downloading data for state MS
-Downloading data for state MO
-Downloading data for state MT
-Downloading data for state NE
-Downloading data for state NV
-Downloading data for state NH
-Downloading data for state NJ
-Downloading data for state NM
-Downloading data for state NY
-Downloading data for state NC
-Downloading data for state ND
-Downloading data for state OH
-Downloading data for state OK
-Downloading data for state OR
-Downloading data for state PA
-Downloading data for state RI
-Downloading data for state SC
-Downloading data for state SD
-Downloading data for state TN
-Downloading data for state TX
-Downloading data for state UT
-Downloading data for state VT
-Downloading data for state VA
-Downloading data for state WA
-Downloading data for state WV
-Downloading data for state WI
-Downloading data for state WY
-Downloading data for state DC
-Downloading data for state VIR
-Downloading data for state PRI
-Downloading data from CovidTracking
-</pre>
-</div>
-</div>
-
-</div>
-</div>
-
 </div>
 <div class="cell border-box-sizing code_cell rendered">
 <div class="input">
-<div class="prompt input_prompt">In&nbsp;[43]:</div>
+<div class="prompt input_prompt">In&nbsp;[&nbsp;]:</div>
 <div class="inner_cell">
     <div class="input_area">
 <div class=" highlight hl-ipython3"><pre><span></span><span class="o">%</span><span class="k">run</span> ./data_collection/01-daily-combine.py
 </pre></div>
 
     </div>
-</div>
-</div>
-
-<div class="output_wrapper">
-<div class="output">
-
-
-<div class="output_area">
-
-    <div class="prompt"></div>
-
-
-<div class="output_subarea output_stream output_stdout output_text">
-<pre>Writing combined data to file data/combined/iclaims.csv
-done
-Writing covidtracking data to file data/combined/covidtracking.csv
-Combining covidtracking and fred, and writing data to file data/combined/combined.csv
-done
-</pre>
-</div>
-</div>
-
 </div>
 </div>
 
@@ -13384,7 +13294,7 @@ done
 </div>
 <div class="cell border-box-sizing code_cell rendered">
 <div class="input">
-<div class="prompt input_prompt">In&nbsp;[11]:</div>
+<div class="prompt input_prompt">In&nbsp;[&nbsp;]:</div>
 <div class="inner_cell">
     <div class="input_area">
 <div class=" highlight hl-ipython3"><pre><span></span><span class="n">fig</span> <span class="o">=</span> <span class="n">go</span><span class="o">.</span><span class="n">Figure</span><span class="p">(</span><span class="n">data</span><span class="o">=</span><span class="n">go</span><span class="o">.</span><span class="n">Choropleth</span><span class="p">(</span>
@@ -13413,26 +13323,39 @@ done
 </div>
 </div>
 
+</div>
+<div class="cell border-box-sizing code_cell rendered">
+<div class="input">
+<div class="prompt input_prompt">In&nbsp;[26]:</div>
+<div class="inner_cell">
+    <div class="input_area">
+<div class=" highlight hl-ipython3"><pre><span></span><span class="n">IFrame</span><span class="p">(</span><span class="n">src</span><span class="o">=</span><span class="s1">&#39;http://alqabandi.co/daml-covid/figure_13.html&#39;</span><span class="p">,</span> <span class="n">height</span><span class="o">=</span><span class="mi">600</span><span class="p">,</span> <span class="n">width</span><span class="o">=</span><span class="mi">900</span><span class="p">)</span>
+</pre></div>
+
+    </div>
+</div>
+</div>
+
 <div class="output_wrapper">
 <div class="output">
 
 
 <div class="output_area">
 
-    <div class="prompt"></div>
+    <div class="prompt output_prompt">Out[26]:</div>
 
 
 
-<div class="output_html rendered_html output_subarea ">
-<iframe
-    scrolling="no"
-    width="100%"
-    height="545px"
-    src="iframe_figures/figure_11.html"
-    frameborder="0"
-    allowfullscreen
-></iframe>
+<div class="output_html rendered_html output_subarea output_execute_result">
 
+        <iframe
+            width="900"
+            height="600"
+            src="http://alqabandi.co/daml-covid/figure_13.html"
+            frameborder="0"
+            allowfullscreen
+        ></iframe>
+        
 </div>
 
 </div>
@@ -13443,7 +13366,7 @@ done
 </div>
 <div class="cell border-box-sizing code_cell rendered">
 <div class="input">
-<div class="prompt input_prompt">In&nbsp;[12]:</div>
+<div class="prompt input_prompt">In&nbsp;[&nbsp;]:</div>
 <div class="inner_cell">
     <div class="input_area">
 <div class=" highlight hl-ipython3"><pre><span></span><span class="c1">#scale = 1000</span>
@@ -13466,7 +13389,20 @@ done
         <span class="n">showlakes</span><span class="o">=</span><span class="kc">True</span><span class="p">,</span> <span class="c1"># lakes</span>
         <span class="n">lakecolor</span><span class="o">=</span><span class="s1">&#39;rgb(255, 255, 255)&#39;</span><span class="p">),</span>
 <span class="p">)</span>
-<span class="n">fig</span><span class="o">.</span><span class="n">show</span><span class="p">();</span>
+<span class="c1">#fig.show();</span>
+</pre></div>
+
+    </div>
+</div>
+</div>
+
+</div>
+<div class="cell border-box-sizing code_cell rendered">
+<div class="input">
+<div class="prompt input_prompt">In&nbsp;[12]:</div>
+<div class="inner_cell">
+    <div class="input_area">
+<div class=" highlight hl-ipython3"><pre><span></span><span class="n">IFrame</span><span class="p">(</span><span class="n">src</span><span class="o">=</span><span class="s1">&#39;http://alqabandi.co/daml-covid/figure_17.html&#39;</span><span class="p">,</span> <span class="n">height</span><span class="o">=</span><span class="mi">600</span><span class="p">,</span> <span class="n">width</span><span class="o">=</span><span class="mi">900</span><span class="p">)</span>
 </pre></div>
 
     </div>
@@ -13479,20 +13415,20 @@ done
 
 <div class="output_area">
 
-    <div class="prompt"></div>
+    <div class="prompt output_prompt">Out[12]:</div>
 
 
 
-<div class="output_html rendered_html output_subarea ">
-<iframe
-    scrolling="no"
-    width="100%"
-    height="545px"
-    src="iframe_figures/figure_12.html"
-    frameborder="0"
-    allowfullscreen
-></iframe>
+<div class="output_html rendered_html output_subarea output_execute_result">
 
+        <iframe
+            width="900"
+            height="600"
+            src="http://alqabandi.co/daml-covid/figure_17.html"
+            frameborder="0"
+            allowfullscreen
+        ></iframe>
+        
 </div>
 
 </div>
@@ -13503,7 +13439,7 @@ done
 </div>
 <div class="cell border-box-sizing code_cell rendered">
 <div class="input">
-<div class="prompt input_prompt">In&nbsp;[13]:</div>
+<div class="prompt input_prompt">In&nbsp;[&nbsp;]:</div>
 <div class="inner_cell">
     <div class="input_area">
 <div class=" highlight hl-ipython3"><pre><span></span><span class="c1">#scale = 1000</span>
@@ -13526,7 +13462,20 @@ done
         <span class="n">showlakes</span><span class="o">=</span><span class="kc">True</span><span class="p">,</span> <span class="c1"># lakes</span>
         <span class="n">lakecolor</span><span class="o">=</span><span class="s1">&#39;rgb(255, 255, 255)&#39;</span><span class="p">),</span>
 <span class="p">)</span>
-<span class="n">fig</span><span class="o">.</span><span class="n">show</span><span class="p">();</span>
+<span class="c1">#fig.show();</span>
+</pre></div>
+
+    </div>
+</div>
+</div>
+
+</div>
+<div class="cell border-box-sizing code_cell rendered">
+<div class="input">
+<div class="prompt input_prompt">In&nbsp;[19]:</div>
+<div class="inner_cell">
+    <div class="input_area">
+<div class=" highlight hl-ipython3"><pre><span></span><span class="n">IFrame</span><span class="p">(</span><span class="n">src</span><span class="o">=</span><span class="s1">&#39;http://alqabandi.co/daml-covid/figure_19.html&#39;</span><span class="p">,</span> <span class="n">height</span><span class="o">=</span><span class="mi">600</span><span class="p">,</span> <span class="n">width</span><span class="o">=</span><span class="mi">900</span><span class="p">)</span>
 </pre></div>
 
     </div>
@@ -13539,20 +13488,20 @@ done
 
 <div class="output_area">
 
-    <div class="prompt"></div>
+    <div class="prompt output_prompt">Out[19]:</div>
 
 
 
-<div class="output_html rendered_html output_subarea ">
-<iframe
-    scrolling="no"
-    width="100%"
-    height="545px"
-    src="iframe_figures/figure_13.html"
-    frameborder="0"
-    allowfullscreen
-></iframe>
+<div class="output_html rendered_html output_subarea output_execute_result">
 
+        <iframe
+            width="900"
+            height="600"
+            src="http://alqabandi.co/daml-covid/figure_19.html"
+            frameborder="0"
+            allowfullscreen
+        ></iframe>
+        
 </div>
 
 </div>
@@ -13563,7 +13512,7 @@ done
 </div>
 <div class="cell border-box-sizing code_cell rendered">
 <div class="input">
-<div class="prompt input_prompt">In&nbsp;[14]:</div>
+<div class="prompt input_prompt">In&nbsp;[&nbsp;]:</div>
 <div class="inner_cell">
     <div class="input_area">
 <div class=" highlight hl-ipython3"><pre><span></span><span class="c1">#scale = 1000</span>
@@ -13586,7 +13535,20 @@ done
         <span class="n">showlakes</span><span class="o">=</span><span class="kc">True</span><span class="p">,</span> <span class="c1"># lakes</span>
         <span class="n">lakecolor</span><span class="o">=</span><span class="s1">&#39;rgb(255, 255, 255)&#39;</span><span class="p">),</span>
 <span class="p">)</span>
-<span class="n">fig</span><span class="o">.</span><span class="n">show</span><span class="p">();</span>
+<span class="c1">#fig.show();</span>
+</pre></div>
+
+    </div>
+</div>
+</div>
+
+</div>
+<div class="cell border-box-sizing code_cell rendered">
+<div class="input">
+<div class="prompt input_prompt">In&nbsp;[18]:</div>
+<div class="inner_cell">
+    <div class="input_area">
+<div class=" highlight hl-ipython3"><pre><span></span><span class="n">IFrame</span><span class="p">(</span><span class="n">src</span><span class="o">=</span><span class="s1">&#39;http://alqabandi.co/daml-covid/figure_20.html&#39;</span><span class="p">,</span> <span class="n">height</span><span class="o">=</span><span class="mi">600</span><span class="p">,</span> <span class="n">width</span><span class="o">=</span><span class="mi">900</span><span class="p">)</span>
 </pre></div>
 
     </div>
@@ -13599,20 +13561,20 @@ done
 
 <div class="output_area">
 
-    <div class="prompt"></div>
+    <div class="prompt output_prompt">Out[18]:</div>
 
 
 
-<div class="output_html rendered_html output_subarea ">
-<iframe
-    scrolling="no"
-    width="100%"
-    height="545px"
-    src="iframe_figures/figure_14.html"
-    frameborder="0"
-    allowfullscreen
-></iframe>
+<div class="output_html rendered_html output_subarea output_execute_result">
 
+        <iframe
+            width="900"
+            height="600"
+            src="http://alqabandi.co/daml-covid/figure_20.html"
+            frameborder="0"
+            allowfullscreen
+        ></iframe>
+        
 </div>
 
 </div>
@@ -13623,7 +13585,7 @@ done
 </div>
 <div class="cell border-box-sizing code_cell rendered">
 <div class="input">
-<div class="prompt input_prompt">In&nbsp;[15]:</div>
+<div class="prompt input_prompt">In&nbsp;[&nbsp;]:</div>
 <div class="inner_cell">
     <div class="input_area">
 <div class=" highlight hl-ipython3"><pre><span></span><span class="c1">#scale = 1000</span>
@@ -13646,7 +13608,20 @@ done
         <span class="n">showlakes</span><span class="o">=</span><span class="kc">True</span><span class="p">,</span> <span class="c1"># lakes</span>
         <span class="n">lakecolor</span><span class="o">=</span><span class="s1">&#39;rgb(255, 255, 255)&#39;</span><span class="p">),</span>
 <span class="p">)</span>
-<span class="n">fig</span><span class="o">.</span><span class="n">show</span><span class="p">();</span>
+<span class="c1">#fig.show();</span>
+</pre></div>
+
+    </div>
+</div>
+</div>
+
+</div>
+<div class="cell border-box-sizing code_cell rendered">
+<div class="input">
+<div class="prompt input_prompt">In&nbsp;[17]:</div>
+<div class="inner_cell">
+    <div class="input_area">
+<div class=" highlight hl-ipython3"><pre><span></span><span class="n">IFrame</span><span class="p">(</span><span class="n">src</span><span class="o">=</span><span class="s1">&#39;http://alqabandi.co/daml-covid/figure_18.html&#39;</span><span class="p">,</span> <span class="n">height</span><span class="o">=</span><span class="mi">600</span><span class="p">,</span> <span class="n">width</span><span class="o">=</span><span class="mi">900</span><span class="p">)</span>
 </pre></div>
 
     </div>
@@ -13659,20 +13634,20 @@ done
 
 <div class="output_area">
 
-    <div class="prompt"></div>
+    <div class="prompt output_prompt">Out[17]:</div>
 
 
 
-<div class="output_html rendered_html output_subarea ">
-<iframe
-    scrolling="no"
-    width="100%"
-    height="545px"
-    src="iframe_figures/figure_15.html"
-    frameborder="0"
-    allowfullscreen
-></iframe>
+<div class="output_html rendered_html output_subarea output_execute_result">
 
+        <iframe
+            width="900"
+            height="600"
+            src="http://alqabandi.co/daml-covid/figure_18.html"
+            frameborder="0"
+            allowfullscreen
+        ></iframe>
+        
 </div>
 
 </div>
@@ -13683,7 +13658,7 @@ done
 </div>
 <div class="cell border-box-sizing code_cell rendered">
 <div class="input">
-<div class="prompt input_prompt">In&nbsp;[16]:</div>
+<div class="prompt input_prompt">In&nbsp;[&nbsp;]:</div>
 <div class="inner_cell">
     <div class="input_area">
 <div class=" highlight hl-ipython3"><pre><span></span><span class="c1">#scale = 1000</span>
@@ -13706,7 +13681,20 @@ done
         <span class="n">showlakes</span><span class="o">=</span><span class="kc">True</span><span class="p">,</span> <span class="c1"># lakes</span>
         <span class="n">lakecolor</span><span class="o">=</span><span class="s1">&#39;rgb(255, 255, 255)&#39;</span><span class="p">),</span>
 <span class="p">)</span>
-<span class="n">fig</span><span class="o">.</span><span class="n">show</span><span class="p">();</span>
+<span class="c1">#fig.show();</span>
+</pre></div>
+
+    </div>
+</div>
+</div>
+
+</div>
+<div class="cell border-box-sizing code_cell rendered">
+<div class="input">
+<div class="prompt input_prompt">In&nbsp;[16]:</div>
+<div class="inner_cell">
+    <div class="input_area">
+<div class=" highlight hl-ipython3"><pre><span></span><span class="n">IFrame</span><span class="p">(</span><span class="n">src</span><span class="o">=</span><span class="s1">&#39;http://alqabandi.co/daml-covid/figure_21.html&#39;</span><span class="p">,</span> <span class="n">height</span><span class="o">=</span><span class="mi">600</span><span class="p">,</span> <span class="n">width</span><span class="o">=</span><span class="mi">900</span><span class="p">)</span>
 </pre></div>
 
     </div>
@@ -13719,20 +13707,20 @@ done
 
 <div class="output_area">
 
-    <div class="prompt"></div>
+    <div class="prompt output_prompt">Out[16]:</div>
 
 
 
-<div class="output_html rendered_html output_subarea ">
-<iframe
-    scrolling="no"
-    width="100%"
-    height="545px"
-    src="iframe_figures/figure_16.html"
-    frameborder="0"
-    allowfullscreen
-></iframe>
+<div class="output_html rendered_html output_subarea output_execute_result">
 
+        <iframe
+            width="900"
+            height="600"
+            src="http://alqabandi.co/daml-covid/figure_21.html"
+            frameborder="0"
+            allowfullscreen
+        ></iframe>
+        
 </div>
 
 </div>
@@ -13743,7 +13731,7 @@ done
 </div>
 <div class="cell border-box-sizing code_cell rendered">
 <div class="input">
-<div class="prompt input_prompt">In&nbsp;[17]:</div>
+<div class="prompt input_prompt">In&nbsp;[&nbsp;]:</div>
 <div class="inner_cell">
     <div class="input_area">
 <div class=" highlight hl-ipython3"><pre><span></span><span class="c1">#scale = 1000</span>
@@ -13766,7 +13754,20 @@ done
         <span class="n">showlakes</span><span class="o">=</span><span class="kc">True</span><span class="p">,</span> <span class="c1"># lakes</span>
         <span class="n">lakecolor</span><span class="o">=</span><span class="s1">&#39;rgb(255, 255, 255)&#39;</span><span class="p">),</span>
 <span class="p">)</span>
-<span class="n">fig</span><span class="o">.</span><span class="n">show</span><span class="p">();</span>
+<span class="c1">#fig.show();</span>
+</pre></div>
+
+    </div>
+</div>
+</div>
+
+</div>
+<div class="cell border-box-sizing code_cell rendered">
+<div class="input">
+<div class="prompt input_prompt">In&nbsp;[15]:</div>
+<div class="inner_cell">
+    <div class="input_area">
+<div class=" highlight hl-ipython3"><pre><span></span><span class="n">IFrame</span><span class="p">(</span><span class="n">src</span><span class="o">=</span><span class="s1">&#39;http://alqabandi.co/daml-covid/figure_22.html&#39;</span><span class="p">,</span> <span class="n">height</span><span class="o">=</span><span class="mi">600</span><span class="p">,</span> <span class="n">width</span><span class="o">=</span><span class="mi">900</span><span class="p">)</span>
 </pre></div>
 
     </div>
@@ -13779,20 +13780,20 @@ done
 
 <div class="output_area">
 
-    <div class="prompt"></div>
+    <div class="prompt output_prompt">Out[15]:</div>
 
 
 
-<div class="output_html rendered_html output_subarea ">
-<iframe
-    scrolling="no"
-    width="100%"
-    height="545px"
-    src="iframe_figures/figure_17.html"
-    frameborder="0"
-    allowfullscreen
-></iframe>
+<div class="output_html rendered_html output_subarea output_execute_result">
 
+        <iframe
+            width="900"
+            height="600"
+            src="http://alqabandi.co/daml-covid/figure_22.html"
+            frameborder="0"
+            allowfullscreen
+        ></iframe>
+        
 </div>
 
 </div>
@@ -13803,7 +13804,7 @@ done
 </div>
 <div class="cell border-box-sizing code_cell rendered">
 <div class="input">
-<div class="prompt input_prompt">In&nbsp;[18]:</div>
+<div class="prompt input_prompt">In&nbsp;[&nbsp;]:</div>
 <div class="inner_cell">
     <div class="input_area">
 <div class=" highlight hl-ipython3"><pre><span></span><span class="c1">#scale = 1000</span>
@@ -13833,26 +13834,39 @@ done
 </div>
 </div>
 
+</div>
+<div class="cell border-box-sizing code_cell rendered">
+<div class="input">
+<div class="prompt input_prompt">In&nbsp;[14]:</div>
+<div class="inner_cell">
+    <div class="input_area">
+<div class=" highlight hl-ipython3"><pre><span></span><span class="n">IFrame</span><span class="p">(</span><span class="n">src</span><span class="o">=</span><span class="s1">&#39;http://alqabandi.co/daml-covid/figure_27.html&#39;</span><span class="p">,</span> <span class="n">height</span><span class="o">=</span><span class="mi">600</span><span class="p">,</span> <span class="n">width</span><span class="o">=</span><span class="mi">900</span><span class="p">)</span>
+</pre></div>
+
+    </div>
+</div>
+</div>
+
 <div class="output_wrapper">
 <div class="output">
 
 
 <div class="output_area">
 
-    <div class="prompt"></div>
+    <div class="prompt output_prompt">Out[14]:</div>
 
 
 
-<div class="output_html rendered_html output_subarea ">
-<iframe
-    scrolling="no"
-    width="100%"
-    height="545px"
-    src="iframe_figures/figure_18.html"
-    frameborder="0"
-    allowfullscreen
-></iframe>
+<div class="output_html rendered_html output_subarea output_execute_result">
 
+        <iframe
+            width="900"
+            height="600"
+            src="http://alqabandi.co/daml-covid/figure_27.html"
+            frameborder="0"
+            allowfullscreen
+        ></iframe>
+        
 </div>
 
 </div>
@@ -13863,7 +13877,7 @@ done
 </div>
 <div class="cell border-box-sizing code_cell rendered">
 <div class="input">
-<div class="prompt input_prompt">In&nbsp;[19]:</div>
+<div class="prompt input_prompt">In&nbsp;[&nbsp;]:</div>
 <div class="inner_cell">
     <div class="input_area">
 <div class=" highlight hl-ipython3"><pre><span></span><span class="c1">#scale = 1000</span>
@@ -13886,7 +13900,20 @@ done
         <span class="n">showlakes</span><span class="o">=</span><span class="kc">True</span><span class="p">,</span> <span class="c1"># lakes</span>
         <span class="n">lakecolor</span><span class="o">=</span><span class="s1">&#39;rgb(255, 255, 255)&#39;</span><span class="p">),</span>
 <span class="p">)</span>
-<span class="n">fig</span><span class="o">.</span><span class="n">show</span><span class="p">();</span>
+<span class="c1">#fig.show();</span>
+</pre></div>
+
+    </div>
+</div>
+</div>
+
+</div>
+<div class="cell border-box-sizing code_cell rendered">
+<div class="input">
+<div class="prompt input_prompt">In&nbsp;[13]:</div>
+<div class="inner_cell">
+    <div class="input_area">
+<div class=" highlight hl-ipython3"><pre><span></span><span class="n">IFrame</span><span class="p">(</span><span class="n">src</span><span class="o">=</span><span class="s1">&#39;http://alqabandi.co/daml-covid/figure_23.html&#39;</span><span class="p">,</span> <span class="n">height</span><span class="o">=</span><span class="mi">600</span><span class="p">,</span> <span class="n">width</span><span class="o">=</span><span class="mi">900</span><span class="p">)</span>
 </pre></div>
 
     </div>
@@ -13899,20 +13926,20 @@ done
 
 <div class="output_area">
 
-    <div class="prompt"></div>
+    <div class="prompt output_prompt">Out[13]:</div>
 
 
 
-<div class="output_html rendered_html output_subarea ">
-<iframe
-    scrolling="no"
-    width="100%"
-    height="545px"
-    src="iframe_figures/figure_19.html"
-    frameborder="0"
-    allowfullscreen
-></iframe>
+<div class="output_html rendered_html output_subarea output_execute_result">
 
+        <iframe
+            width="900"
+            height="600"
+            src="http://alqabandi.co/daml-covid/figure_23.html"
+            frameborder="0"
+            allowfullscreen
+        ></iframe>
+        
 </div>
 
 </div>
