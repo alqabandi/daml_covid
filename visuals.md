@@ -127,10 +127,8 @@ fig.show();
 
 
 ```python
-IFrame(src='http://alqabandi.co/daml-covid/figure_13.html', height=600, width=900)
+display(IFrame(src='http://alqabandi.co/daml-covid/figure_13.html', height=600, width=900))
 ```
-
-
 
 
 
@@ -141,7 +139,6 @@ IFrame(src='http://alqabandi.co/daml-covid/figure_13.html', height=600, width=90
     frameborder="0"
     allowfullscreen
 ></iframe>
-
 
 
 
@@ -172,10 +169,8 @@ fig.update_layout(
 
 
 ```python
-IFrame(src='http://alqabandi.co/daml-covid/figure_17.html', height=600, width=900)
+display(IFrame(src='http://alqabandi.co/daml-covid/figure_17.html', height=600, width=900))
 ```
-
-
 
 
 
@@ -186,7 +181,6 @@ IFrame(src='http://alqabandi.co/daml-covid/figure_17.html', height=600, width=90
     frameborder="0"
     allowfullscreen
 ></iframe>
-
 
 
 
@@ -217,10 +211,8 @@ fig.update_layout(
 
 
 ```python
-IFrame(src='http://alqabandi.co/daml-covid/figure_19.html', height=600, width=900)
+display(IFrame(src='http://alqabandi.co/daml-covid/figure_19.html', height=600, width=900))
 ```
-
-
 
 
 
@@ -231,7 +223,6 @@ IFrame(src='http://alqabandi.co/daml-covid/figure_19.html', height=600, width=90
     frameborder="0"
     allowfullscreen
 ></iframe>
-
 
 
 
@@ -262,10 +253,8 @@ fig.update_layout(
 
 
 ```python
-IFrame(src='http://alqabandi.co/daml-covid/figure_20.html', height=600, width=900)
+display(IFrame(src='http://alqabandi.co/daml-covid/figure_20.html', height=600, width=900))
 ```
-
-
 
 
 
@@ -276,7 +265,6 @@ IFrame(src='http://alqabandi.co/daml-covid/figure_20.html', height=600, width=90
     frameborder="0"
     allowfullscreen
 ></iframe>
-
 
 
 
@@ -307,10 +295,8 @@ fig.update_layout(
 
 
 ```python
-IFrame(src='http://alqabandi.co/daml-covid/figure_18.html', height=600, width=900)
+display(IFrame(src='http://alqabandi.co/daml-covid/figure_18.html', height=600, width=900))
 ```
-
-
 
 
 
@@ -321,7 +307,6 @@ IFrame(src='http://alqabandi.co/daml-covid/figure_18.html', height=600, width=90
     frameborder="0"
     allowfullscreen
 ></iframe>
-
 
 
 
@@ -352,10 +337,8 @@ fig.update_layout(
 
 
 ```python
-IFrame(src='http://alqabandi.co/daml-covid/figure_21.html', height=600, width=900)
+display(IFrame(src='http://alqabandi.co/daml-covid/figure_21.html', height=600, width=900))
 ```
-
-
 
 
 
@@ -366,7 +349,6 @@ IFrame(src='http://alqabandi.co/daml-covid/figure_21.html', height=600, width=90
     frameborder="0"
     allowfullscreen
 ></iframe>
-
 
 
 
@@ -397,10 +379,8 @@ fig.update_layout(
 
 
 ```python
-IFrame(src='http://alqabandi.co/daml-covid/figure_22.html', height=600, width=900)
+display(IFrame(src='http://alqabandi.co/daml-covid/figure_22.html', height=600, width=900))
 ```
-
-
 
 
 
@@ -411,7 +391,6 @@ IFrame(src='http://alqabandi.co/daml-covid/figure_22.html', height=600, width=90
     frameborder="0"
     allowfullscreen
 ></iframe>
-
 
 
 
@@ -442,10 +421,8 @@ fig.show();
 
 
 ```python
-IFrame(src='http://alqabandi.co/daml-covid/figure_27.html', height=600, width=900)
+display(IFrame(src='http://alqabandi.co/daml-covid/figure_27.html', height=600, width=900))
 ```
-
-
 
 
 
@@ -456,7 +433,6 @@ IFrame(src='http://alqabandi.co/daml-covid/figure_27.html', height=600, width=90
     frameborder="0"
     allowfullscreen
 ></iframe>
-
 
 
 
@@ -487,10 +463,8 @@ fig.update_layout(
 
 
 ```python
-IFrame(src='http://alqabandi.co/daml-covid/figure_23.html', height=600, width=900)
+display(IFrame(src='http://alqabandi.co/daml-covid/figure_23.html', height=600, width=900))
 ```
-
-
 
 
 
@@ -501,7 +475,6 @@ IFrame(src='http://alqabandi.co/daml-covid/figure_23.html', height=600, width=90
     frameborder="0"
     allowfullscreen
 ></iframe>
-
 
 
 
