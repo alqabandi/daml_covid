@@ -8,7 +8,7 @@ In this repository, I combine:
 * Population estimates for each state, from the [Census](https://www.census.gov/data/tables/time-series/demo/popest/2010s-state-total.html#par_textimage)  
 * Dates the each state declared an emergency, and/or declared some sort of shelter-in-place or stay-at-home order.  
 
-After cloning the repository, you can explore the data by running the [notebook](https://github.com/alqabandi/daml_covid/blob/master/unemployment/visualization/visuals.ipynb) as is.  
+After cloning the repository, you can explore the data by running the [notebook](https://github.com/alqabandi/daml_covid/blob/master/visuals.ipynb) as is.  
 
 I hope to add more social/demographic information as they come through, so I will update this page accordingly.  
 
