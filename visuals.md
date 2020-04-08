@@ -10,7 +10,7 @@ import plotly.io as pio
 #pio.renderers.default = "iframe_connected"
 import IPython
 from IPython.display import IFrame
-from IPython.display import HTML
+from IPython.display import HTML, display
 ```
 
 ## Downloading and combining latest data
@@ -128,6 +128,7 @@ fig.show();
 
 ```python
 display(IFrame(src='http://alqabandi.co/daml-covid/figure_13.html', height=600, width=900))
+#display(HTML(url='alqabandi.co/daml-covid/figure_13.html'))
 ```
 
 
