@@ -1,6 +1,8 @@
 
 # Ecomonic impact of Covid-19. 
 
+#### [Click here for latest visuals](http://alqabandi.co/daml-covid/visuals.html). 
+
 In this repository, I combine:  
 
 * Historical, as well as daily covid data, by state, from [Covid Tracking](https://covidtracking.com/api/v1/states/daily). Which state by state information about the total number of tests conducted, total number of positive covid cases etc. There are also _some_ information on total number of covid patients hospitalized and on ventilators.   
